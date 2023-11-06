@@ -1,0 +1,75 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXFileReference section */
+		C9F0D9E42AF782FA006D2A00 /* pong.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pong.c; sourceTree = "<group>"; };
+		C9F0D9E82AF7835D006D2A00 /* build.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
+		C9F0DA262AF8F6B9006D2A00 /* pong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pong.h; sourceTree = "<group>"; };
+		C9F0DA272AF8F6B9006D2A00 /* pong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pong.m; sourceTree = "<group>"; };
+		C9F0DB022AF94343006D2A00 /* package.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = package.sh; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		C9F0D9D32AF782C7006D2A00 = {
+			isa = PBXGroup;
+			children = (
+				C9F0D9E42AF782FA006D2A00 /* pong.c */,
+				C9F0D9E82AF7835D006D2A00 /* build.sh */,
+				C9F0DA262AF8F6B9006D2A00 /* pong.h */,
+				C9F0DA272AF8F6B9006D2A00 /* pong.m */,
+				C9F0DB022AF94343006D2A00 /* package.sh */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		C9F0D9D52AF782C7006D2A00 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C9F0D9D62AF782C7006D2A00 /* Build configuration list for PBXProject "pong" */;
+			buildStyles = (
+			);
+			hasScannedForEncodings = 0;
+			mainGroup = C9F0D9D32AF782C7006D2A00;
+			projectDirPath = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		C9F0D9D72AF782C7006D2A00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		C9F0D9D82AF782C7006D2A00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9F0D9D62AF782C7006D2A00 /* Build configuration list for PBXProject "pong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9F0D9D72AF782C7006D2A00 /* Debug */,
+				C9F0D9D82AF782C7006D2A00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9F0D9D52AF782C7006D2A00 /* Project object */;
+}
