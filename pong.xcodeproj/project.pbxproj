@@ -6,43 +6,223 @@
 	objectVersion = 42;
 	objects = {
 
+/* Begin PBXBuildStyle section */
+		C9F8254B2AFBA11400B1C31B /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Development;
+		};
+		C9F8254C2AFBA11400B1C31B /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
 /* Begin PBXFileReference section */
+		C91B6E6E2AFCF228002E3D82 /* pong_opengl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pong_opengl.m; sourceTree = "<group>"; };
+		C99E5DDD2AFD4C8400495607 /* BuildTarget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = BuildTarget.app; path = build/Debug/BuildTarget.app; sourceTree = "<group>"; };
+		C99E5DE02AFD4C8400495607 /* BuildTarget-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "BuildTarget-Info.plist"; sourceTree = "<group>"; };
 		C9F0D9E42AF782FA006D2A00 /* pong.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pong.c; sourceTree = "<group>"; };
 		C9F0D9E82AF7835D006D2A00 /* build.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
 		C9F0DA262AF8F6B9006D2A00 /* pong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pong.h; sourceTree = "<group>"; };
-		C9F0DA272AF8F6B9006D2A00 /* pong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pong.m; sourceTree = "<group>"; };
+		C9F0DA272AF8F6B9006D2A00 /* pong_bitmap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pong_bitmap.m; sourceTree = "<group>"; };
 		C9F0DB022AF94343006D2A00 /* package.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = package.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFrameworksBuildPhase section */
+		C99E5DDB2AFD4C8400495607 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
+		C99E5DDE2AFD4C8400495607 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C99E5DDD2AFD4C8400495607 /* BuildTarget.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C9F0D9D32AF782C7006D2A00 = {
 			isa = PBXGroup;
 			children = (
 				C9F0D9E42AF782FA006D2A00 /* pong.c */,
 				C9F0D9E82AF7835D006D2A00 /* build.sh */,
 				C9F0DA262AF8F6B9006D2A00 /* pong.h */,
-				C9F0DA272AF8F6B9006D2A00 /* pong.m */,
+				C9F0DA272AF8F6B9006D2A00 /* pong_bitmap.m */,
 				C9F0DB022AF94343006D2A00 /* package.sh */,
+				C91B6E6E2AFCF228002E3D82 /* pong_opengl.m */,
+				C99E5DDE2AFD4C8400495607 /* Products */,
+				C99E5DE02AFD4C8400495607 /* BuildTarget-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXNativeTarget section */
+		C99E5DDC2AFD4C8400495607 /* BuildTarget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C99E5DE12AFD4C8500495607 /* Build configuration list for PBXNativeTarget "BuildTarget" */;
+			buildPhases = (
+				C99E5DD92AFD4C8400495607 /* Resources */,
+				C99E5DDA2AFD4C8400495607 /* Sources */,
+				C99E5DDB2AFD4C8400495607 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "BuildTarget-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = BuildTarget;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			dependencies = (
+			);
+			name = BuildTarget;
+			productName = BuildTarget;
+			productReference = C99E5DDD2AFD4C8400495607 /* BuildTarget.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.BuildTarget</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
 /* Begin PBXProject section */
 		C9F0D9D52AF782C7006D2A00 /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = C9F0D9D62AF782C7006D2A00 /* Build configuration list for PBXProject "pong" */;
+			buildSettings = {
+			};
 			buildStyles = (
+				C9F8254B2AFBA11400B1C31B /* Development */,
+				C9F8254C2AFBA11400B1C31B /* Deployment */,
 			);
 			hasScannedForEncodings = 0;
 			mainGroup = C9F0D9D32AF782C7006D2A00;
+			productRefGroup = C99E5DDE2AFD4C8400495607 /* Products */;
 			projectDirPath = "";
 			targets = (
+				C99E5DDC2AFD4C8400495607 /* BuildTarget */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		C99E5DD92AFD4C8400495607 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C99E5DDA2AFD4C8400495607 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
 /* Begin XCBuildConfiguration section */
+		C99E5DE22AFD4C8500495607 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "BuildTarget-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = BuildTarget;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C99E5DE32AFD4C8500495607 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "BuildTarget-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = BuildTarget;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		C9F0D9D72AF782C7006D2A00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -60,6 +240,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C99E5DE12AFD4C8500495607 /* Build configuration list for PBXNativeTarget "BuildTarget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C99E5DE22AFD4C8500495607 /* Debug */,
+				C99E5DE32AFD4C8500495607 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C9F0D9D62AF782C7006D2A00 /* Build configuration list for PBXProject "pong" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
